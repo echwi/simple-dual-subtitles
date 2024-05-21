@@ -1,0 +1,45 @@
+{
+  "name": "chrome-extension-webpack",
+  "version": "0.0.1",
+  "description": "A boilerplate to chrome extension with webpack",
+  "scripts": {
+    "build": "node build-script/build.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.267",
+    "@types/lodash": "^4.17.1",
+    "@types/twig": "^1.12.16",
+    "browserify-fs": "^1.0.0",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.0.5",
+    "css-loader": "^7.1.1",
+    "file-loader": "4.3.0",
+    "fs-extra": "8.1.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "5.3.2",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.9.0",
+    "node-sass": "^9.0.0",
+    "path-browserify": "^1.0.1",
+    "raw-loader": "^4.0.2",
+    "requirejs": "^2.3.6",
+    "rxjs": "^7.8.1",
+    "sass-loader": "^14.2.1",
+    "style-loader": "1.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "translate": "^3.0.0",
+    "ts-loader": "^9.5.1",
+    "twig": "^1.17.1",
+    "twig-loader": "^0.5.5",
+    "typescript": "^5.4.5",
+    "webpack": "5.91.0",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "webpack-run-chrome-extension": "^1.1.7",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "add": "^2.0.6"
+  }
+}
