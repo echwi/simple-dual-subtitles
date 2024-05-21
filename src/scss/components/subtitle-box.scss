@@ -1,0 +1,22 @@
+$padding-size: 0.16em;
+$gap-to-main-subtitles: rem(20);
+
+.subtitle-box {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+
+  &__content {
+    position: relative;
+    display: inline-block;
+    bottom: $gap-to-main-subtitles;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: rem(24);
+    font-weight: 700;
+    padding: rem(2);
+  }
+
+  &__language-info {
+    margin-bottom: 0;
+  }
+}

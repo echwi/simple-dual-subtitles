@@ -1,0 +1,52 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/base.scss ***!
+  \*************************************************************************************************************/
+/* Colors */
+/* Functions */
+/* Layout */
+.main-popup {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  min-width: 25rem;
+  height: auto;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem;
+  border: 0.125rem solid #ffffff;
+  margin: 0;
+}
+.main-popup__title {
+  font-size: 1.375rem;
+}
+.main-popup__sub-title {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+.main-popup__label {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.main-popup__select {
+  padding: 0.5rem;
+  width: 18.75rem;
+}
+
+/* Components */
+.subtitle-box {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+}
+.subtitle-box__content {
+  position: relative;
+  display: inline-block;
+  bottom: 1.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.125rem;
+}
+.subtitle-box__language-info {
+  margin-bottom: 0;
+}

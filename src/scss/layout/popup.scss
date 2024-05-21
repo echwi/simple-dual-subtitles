@@ -1,0 +1,31 @@
+.main-popup {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: rem(16);
+  min-width: rem(400);
+  height: auto;
+  background: $main;
+  color: $secondary;
+  padding: rem(32);
+  border: rem(2) solid $secondary;
+  margin: 0;
+
+  &__title {
+    font-size: rem(22);
+  }
+
+  &__sub-title {
+    margin-top: rem(24);
+    font-size: rem(20);
+  }
+
+  &__label {
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: rem(16);
+  }
+
+  &__select {
+    padding: rem(8);
+    width: rem(300);
+  }
+}
