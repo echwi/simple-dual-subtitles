@@ -4,11 +4,11 @@ import {SubtitleData, SubtitleTimestampWithContent} from "../../shared/model/sub
 import {TargetLanguageCode} from "../../shared/chrome-storage/property/target-language-code";
 
 /**
- * Gets the current subtitle (line(s)) based on the available subtitle data,
+ * Provides the current subtitle string based on
  * the video id, the target language code, and the timestamp from the DOM
  */
 export class CurrentSubtitleService {
-    /** Hack to make target and source subtitle-store-service appear more synchronized. Not perfect due to millisecond-level discrepancies.*/
+    /** Modifier to decrease the possibility of synchronization errors, since the DOM time value lacks a milliseconds value */
     protected static readonly MILLISECONDS_ADDED_TO_VIKI_TIMING = 1000;
 
     private allSubtitlesProperty: AllSubtitles;
@@ -61,7 +61,7 @@ export class CurrentSubtitleService {
         }
         const totalSecondsOfTimeInVikiEl = hours * 3600 + minutes * 60 + seconds;
         const currentTimeInMillisecondsBasedOnDiv = totalSecondsOfTimeInVikiEl * 1000;
-        const adjustedCurrentTimeInMilliseconds = currentTimeInMillisecondsBasedOnDiv + CurrentSubtitleService.MILLISECONDS_ADDED_TO_VIKI_TIMING; // Adjust as needed
+        const adjustedCurrentTimeInMilliseconds = currentTimeInMillisecondsBasedOnDiv + CurrentSubtitleService.MILLISECONDS_ADDED_TO_VIKI_TIMING;
 
         return this.binarySearchTimestamps(timestamps, adjustedCurrentTimeInMilliseconds, 0, timestamps.length - 1);
     }

@@ -4,7 +4,7 @@ import {ReplaySubject} from "rxjs";
 import {InterceptedSubtitleData} from "../../shared/xhr-intercept/xhr-intercept";
 
 /**
- * Save the subtitle data in the chrome storage
+ * Saves the subtitle data in the chrome storage
  */
 export class SubtitleStoreService {
     private alreadyProcessedUrls: string[] = [];

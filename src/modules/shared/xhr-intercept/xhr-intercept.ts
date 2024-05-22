@@ -6,8 +6,8 @@ export interface InterceptedSubtitleData {
 }
 
 /**
- * Hack to read viki responses,
- * so that no additional requests need to be sent to get all required Viki data
+ * Monkeypatch to intercept Viki subtitle responses,
+ * eliminating the need for additional requests to obtain all necessary Viki data
  */
 export const interceptXhrAndEmitSubtitleResponses = function() {
     function isSubtitleRequest(url) {
@@ -18,7 +18,7 @@ export const interceptXhrAndEmitSubtitleResponses = function() {
     const send = XHR.send;
     const open = XHR.open;
     XHR.open = function(method, url) {
-        this.url = url; // the request url
+        this.url = url;
         return open.apply(this, arguments);
     }
     XHR.send = function() {

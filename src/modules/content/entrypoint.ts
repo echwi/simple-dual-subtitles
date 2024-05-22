@@ -9,7 +9,7 @@ import {SubtitleStoreService} from "./subtitle-store-service/subtitle-store-serv
 import {SubtitleDataFactory} from "../shared/factory/subtitle-data-factory";
 import {DomService} from "./dom/dom-service";
 
-/** Do this as fast as possible */
+/** Do this as early as possible */
 const subtitleRequestResponses$ = getSubtitleRequestResponses();
 {
     class ContentEntrypoint extends AbstractEntrypoint {

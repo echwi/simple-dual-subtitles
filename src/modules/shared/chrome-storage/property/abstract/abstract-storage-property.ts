@@ -9,6 +9,14 @@ export abstract class AbstractStorageProperty<T> implements IStorageProperty<T> 
     private constructor() {
     }
 
+    /**
+     * Initializes the property based on the current chrome storage
+     * and set up an observable to listen to changes,
+     * that way the get method always returns the current value
+     * and the onChanged method can be used to listen to changes
+     *
+     * @param key
+     */
     public async init(key: string): Promise<void> {
         this.key = key;
         this.observable = new Subject<T>();

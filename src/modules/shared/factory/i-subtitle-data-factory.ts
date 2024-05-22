@@ -1,4 +1,4 @@
-import { SubtitleData } from "../model/subtitle-data"; // Import the interface
+import { SubtitleData } from "../model/subtitle-data";
 
 export interface ISubtitleDataFactory {
     /**

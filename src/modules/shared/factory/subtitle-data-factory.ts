@@ -1,5 +1,5 @@
 import { SubtitleData, SubtitleTimestampWithContent } from "../model/subtitle-data";
-import { ISubtitleDataFactory } from "./i-subtitle-data-factory"; // Import the interface
+import { ISubtitleDataFactory } from "./i-subtitle-data-factory";
 
 export class SubtitleDataFactory implements ISubtitleDataFactory {
     static instance: SubtitleDataFactory | null = null;
@@ -21,7 +21,7 @@ export class SubtitleDataFactory implements ISubtitleDataFactory {
 
     private splitFullTextIntoArray(text: string): SubtitleTimestampWithContent[] {
         const lines = text.split('\n');
-        const timestampsWithContent: SubtitleTimestampWithContent[] = []; // Use the interface
+        const timestampsWithContent: SubtitleTimestampWithContent[] = [];
         const responseTimeStampPattern = /(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})/;
         lines.forEach((line, index) => {
             const trimmedLine = line.trim();
@@ -41,16 +41,15 @@ export class SubtitleDataFactory implements ISubtitleDataFactory {
      * @param timeCode - hh:mm:ss.mmm
      **/
     private timeCodeToMilliseconds(timeCode: string): number {
-        // beforeMilliseconds - hhmmss
-        const [beforeMilliseconds, milliseconds] = timeCode.split('.');
-        const [hours, minutes, seconds] = beforeMilliseconds.split(':').map(Number);
+        const [hoursMinutesAndSeconds, milliseconds] = timeCode.split('.');
+        const [hours, minutes, seconds] = hoursMinutesAndSeconds.split(':').map(Number);
         return hours * 60 * 60 * 1000 + minutes * 60 * 1000 + seconds * 1000 + parseInt(milliseconds);
     }
 
     private extractVideoId(subtitleFetchUrl): string {
         const match = subtitleFetchUrl.match(SubtitleDataFactory.VIDEO_ID_REGEX);
         if (!(match && match[1])) {
-            return; //ToDo: Maybe throw an error
+            return;
         }
 
         return match[1]
@@ -59,7 +58,7 @@ export class SubtitleDataFactory implements ISubtitleDataFactory {
     private extractVideoLanguage(subtitleFetchUrl): string {
         const match: RegExpMatchArray = subtitleFetchUrl.match(SubtitleDataFactory.URL_LANGUAGE_REGEX);
         if (!(match && match[1])) {
-            return; //ToDo: Maybe throw an error
+            return;
         }
 
         return match[1]
