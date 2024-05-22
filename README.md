@@ -25,7 +25,3 @@ The addon does not request or fetch any new data; it simply listens for and disp
 ## Important Notes
 1. **Timing**: Note that millisecond timing might occasionally be inaccurate due to the way the extension processes the subtitles.
 2. **Dependency**: The functionality depends on Viki operating as it currently does. So it might stop working in the future if Viki changes its website structure.
-
-## License
-
-This extension is licensed under the MIT License. For more details, refer to the LICENSE file.
