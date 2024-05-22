@@ -5,7 +5,7 @@
 
 This extension is a non-commercial personal project intended to help language learners by providing the possibility to show two subtitles at once on Viki.com. I started to build it because I wanted to watch shows with dual subtitles, and I couldn't get other solutions to work.
 
-It is by no means supported or associated with Viki.com. Every bug is solely caused by the extension and the way it is built. It also heavily relies on the current structure of the Viki website, which can change at any time.
+It is by no means supported by or associated with Viki.com. Every bug is solely caused by the extension and the way it is built. It also heavily relies on the current structure of the Viki website, which can change at any time.
 
 ## How It Works
 
